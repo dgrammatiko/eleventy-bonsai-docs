@@ -1,0 +1,15 @@
+---
+permalink: search-data.json
+eleventyExcludeFromCollections: true
+---
+{
+  {%- for post in collections.docs %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  "{{ loop.index0 }}": {
+    "title": "{{ post.data.title }}",
+    "content": "{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}",
+    "relUrl": "{{ post.url | url }}",
+    "url": "{{ absolutePostUrl }}"
+  }
+  {%- endfor %}
+}
