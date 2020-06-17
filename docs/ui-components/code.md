@@ -8,18 +8,7 @@ eleventyNavigation:
   order: 13
 ---
 
-# Code
-
-{: .no_toc }
-
 ## Table of contents
-
-{: .no_toc .text-delta }
-
-1. TOC
-   {:toc}
-
----
 
 ## Inline code
 
@@ -28,6 +17,7 @@ Code can be rendered inline by wrapping it in single back ticks.
 <div class="code-example" markdown="1">
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </div>
+
 ```markdown
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ```
@@ -39,25 +29,24 @@ Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiu
 Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
 
 <div class="code-example" markdown="1">
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-</div>
-{% highlight markdown %}
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-{% endhighlight %}
 
----
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require("./lang/" + l);
+  return true;
+};
+```
+
+</div>
+
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require("./lang/" + l);
+  return true;
+};
+```
 
 ## Code blocks with rendered examples
 
@@ -65,23 +54,10 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 <div class="code-example" markdown="1">
 
-<div class="code-example" markdown="1">
-
-[Link button](http://example.com/){: .btn }
+[Link button](http://example.com/)
 
 </div>
+
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](http://example.com/)
 ```
-
-</div>
-{% highlight markdown %}
-<div class="code-example" markdown="1">
-
-[Link button](http://example.com/){: .btn }
-
-</div>
-```markdown
-[Link button](http://example.com/){: .btn }
-```
-{% endhighlight %}

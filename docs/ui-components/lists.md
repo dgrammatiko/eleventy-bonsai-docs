@@ -8,18 +8,7 @@ eleventyNavigation:
   order: 15
 ---
 
-# Lists
-
-{: .no_toc }
-
 ## Table of contents
-
-{: .no_toc .text-delta }
-
-1. TOC
-   {:toc}
-
----
 
 Most lists can be rendered with pure Markdown.
 
@@ -56,6 +45,7 @@ _or_
 1. Item 2
 1. Item 3
 </div>
+
 ```markdown
 1. Item 1
 1. Item 2
@@ -69,6 +59,7 @@ _or_
 - [ ] hello, this is another todo item
 - [x] goodbye, this item is done
 </div>
+
 ```markdown
 - [ ] hello, this is a todo item
 - [ ] hello, this is another todo item
@@ -91,6 +82,7 @@ Definition lists require HTML syntax and aren't supported with the GitHub Flavor
 <dd>Green</dd>
 </dl>
 </div>
+
 ```html
 <dl>
   <dt>Name</dt>
