@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("docs/assets");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -89,7 +89,7 @@ module.exports = function (eleventyConfig) {
 
     // These are all optional, defaults are shown:
     dir: {
-      input: ".",
+      input: "./docs",
       includes: "_includes",
       layouts: "layouts",
       data: "_data",
