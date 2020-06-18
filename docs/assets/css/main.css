@@ -1,3 +1,9 @@
+:root {
+  --primary: #5e81ac;
+  --secondary: #81a1c1;
+  --text-main: #2e3440;;
+}
+
 html {
   height: 100%;
 }
@@ -30,4 +36,26 @@ body {
 
 .footer {
   grid-area: footer;
+}
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  padding-left: 1rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding-left: 1rem;
+  padding-bottom: .5rem
+}
+
+.main-nav > ul {
+  list-style: none;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.main-nav a:hover {
+  color: var(--text-bright);
 }

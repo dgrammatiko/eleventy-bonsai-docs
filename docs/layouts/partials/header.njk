@@ -1,18 +1,18 @@
-<div>
-<button onclick="menuToggle()">Menu</button>
+<div style="--p: 1rem 2rem;">
+<button onclick="menuToggle()" style="--d-md:none; ">Menu</button>
 
 Site Title etc...
 </div>
 <script>
 window.menuToggle = () => {
   if (document.body.classList.contains('open')) {
-    document.body.style.gridTemplateColumns = "0 1fr";
     document.body.classList.remove('open');
-    document.querySelector('aside').style.display = 'none';
+    document.body.style.setProperty('--gtc', '240px 1fr');
+    document.querySelector('aside').style.setProperty('--d', 'block');
   } else {
-  document.body.style.gridTemplateColumns = "240px 1fr";
     document.body.classList.add('open');
-    document.querySelector('aside').style.display = 'block';
+    document.body.style.setProperty('--gtc', '0 1fr');
+    document.querySelector('aside').style.setProperty('--d', 'none');
   }
 }
 </script>
