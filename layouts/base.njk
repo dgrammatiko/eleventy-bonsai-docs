@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 
   </head>
-  <body class="body-container open">
+  <body class="body-container open" style="--gtc:0 1fr; --gtc-md:240px 1fr;">
 
     <header class="header">
       {% include "layouts/partials/header.njk" %}
     </header>
 
-    <aside class="aside">
+    <aside class="aside" style="--bg:#eceff4; --d:none; --d-md:block">
       {% include "layouts/partials/nav.njk" %}
     </aside>
 
-    <main class="main" >
+    <main class="main" style="--p:1rem 2rem">
       {{ content | safe }}
     </main>
 
