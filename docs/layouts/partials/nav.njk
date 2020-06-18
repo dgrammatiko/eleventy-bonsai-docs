@@ -1,4 +1,15 @@
 
 <nav class="main-nav" id="main-nav" style="--size: 1.1em; --lh:2rem">
-  {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+    listElement: "ul",
+    listItemElement: "li",
+    listClass: "",
+    listItemClass: "",
+    listItemHasChildrenClass: "",
+    activeListItemClass: "active",
+    anchorClass: "",
+    activeAnchorClass: "active-link",
+    activeKey: eleventyNavigation.key,
+    showExcerpt: false
+}) | safe }}
 </nav>
