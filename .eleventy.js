@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const codepenIt = require("11ty-to-codepen");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -49,9 +50,11 @@ module.exports = function (eleventyConfig) {
   }).use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "direct-link",
-    permalinkSymbol: "#",
+    permalinkSymbol: "🔗",
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  eleventyConfig.addPairedShortcode("codepen", codepenIt);
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({

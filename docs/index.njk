@@ -5,4 +5,73 @@ eleventyNavigation:
   order: 1
 ---
 
+<script>
+function liveprop(svar, shorthand, unit, target) {
+    let input = document.getElementById(`${svar}`);
+    let label = document.getElementById(`${svar}-label`);
+    let demotarget = document.getElementById(`${target}`);
+    input.addEventListener('input', ({target}) => {
+        let propValue = target.value + unit;
+        label.textContent = shorthand + ':' + propValue + ';';
+        demotarget.style.setProperty(shorthand, propValue);
+    });
+    input.addEventListener('mousedown', () => {label.classList.add('changing');});
+    input.addEventListener('mouseup', () => {label.classList.remove('changing');});
+}
+</script>
 <h1>Home</h1>
+
+<header clsas="home-header" style="--pos:relative; --z:1">
+    <div style="--d:flex;--fd:column;--ai:center;--jc:center; --mb:2rem">
+      <img src="{{ "logo.png" | url }}" alt="bonsaicss" style="--m:2rem auto 0; --d: block;">
+      <h1 style="--ta: center; --mb:0" bonsai="--m:5rem">bonsai.css</h1>
+      <h4 style="--ta: center; --mw: 450px; --m: auto auto .5rem; --px:1rem">A Utility Complete CSS Framework for less than 45kb (<strong>8kb Gzipped</strong>)</h4>
+      <div style="--p:.5rem; --ta:center">
+        <a href="#learn-more"><button class="white">Learn More</button></a>
+        <a href="/docs/getting-started/installation/"><button>Getting Started</button></a>
+        <a href="https://github.com/bonsaicss/bonsai.css" target="_blank"><button style="--bg:#282c34">Github</button></a>
+      </div>
+    </div>
+    <div style="--d:flex; --fd:column; --fd-lg:row; --jc:center; --mb-md:10rem; --bg:#eee;">
+      <div style="--w:100%; --maxw-lg:260px; --p:1rem;">
+        <label for="maxw">Max Width</label>
+        <input class="slider" type="range" id="maxw" name="maxw" min="300" max="550" value="400">
+        <label for="levitate">Levitate</label>
+        <input class="slider" type="range" id="levitate" name="levitate" min="0" max="20" value="3">
+        <label for="padding">Padding</label>
+        <input class="slider" type="range" id="padding" name="padding" min="0" max="30" value="0">
+        <label for="br">Border Radius</label>
+        <input class="slider" type="range" id="br" name="br" min="0" max="80" value="5">
+      </div>
+      <div class="markdown" style="--maxw:100%; --maxw-lg:800px; --w:100%; --ml-md:1rem; --pos:relative; --p-md:0; --p:0 1rem;">
+      <div style="--m:1rem auto; --m-md:4rem; --pos-md:absolute; top:50px; --right: 0; --right-lg: -100px; --z:1; --d:flex; --jc:center">
+        <figure id="demo" style="--mb:1.5rem; --maxw:400px; --levitate:3; --br:5px; --px:0; --bg:#fff;">
+        <img src="https://source.unsplash.com/QMB1ur53fnI/130x130" alt="sample" style="--mt:2rem;--mr:auto;--ml:auto;--br:50%">
+        <figcaption style="--ta:center">
+            <h4>Sarah Drake</h4>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        </figcaption>
+        </figure>
+      </div>
+      <script>
+        (function() {
+        document.addEventListener("DOMContentLoaded", function() {
+            liveprop('padding', '--p', 'px', 'demo');
+            liveprop('maxw', '--maxw', 'px', 'demo');
+            liveprop('br', '--br', 'px', 'demo');
+            liveprop('levitate', '--levitate', '', 'demo');
+            });
+        })();
+      </script>
+<div class="highlight"><pre class="chroma"><code class="language-html" style="--p:1.5rem 2rem; --minh:240px" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">style</span><span class="o">=</span><span class="s">"<span id="maxw-label">--maxw:400px;</span> <span id="levitate-label">--levitate:3;</span> <span id="padding-label">--p:0px</span> <span id="br-label">--br:5px;</span>"</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"#"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"sample"</span> <span class="na">style</span><span class="o">=</span><span class="s">"--m:2rem auto 0; --br:50%"</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">style</span><span class="o">=</span><span class="s">"--ta:center"</span><span class="p"></span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h4</span><span class="p"></span><span class="p">&gt;</span>Sarah Drake<span class="p">&lt;</span><span class="p">/</span><span class="nt">h4</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p"></span><span class="p">&gt;</span> ... <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre>
+        </div>
+        
+      </div>
+    </div>
+  </header>

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link href="https://unpkg.com/bonsai.css@latest/dist/bonsai.min.css" rel="stylesheet">
+    <link href="{{ '/assets/css/bonsai.min.css' | url }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/highlight.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/other.css' | url }}">
 
   </head>
-  <body class="body-container open" style="--gtc:0 1fr; --gtc-md:240px 1fr;">
+  <body class="body-container open" style="--bgc:var(--background); --text-main:var(--text-main); --gtc:0 1fr; --gtc-md:240px 1fr;">
 
     <header class="header">
       {% include "docs/layouts/partials/header.njk" %}

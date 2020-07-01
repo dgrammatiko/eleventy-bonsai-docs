@@ -1,7 +1,9 @@
 :root {
   --primary: #5e81ac;
   --secondary: #81a1c1;
-  --text-main: #2e3440;;
+  --text-main: #fff;
+  --background: #222; /* hsl(214, 31%, 31%); */
+  --background-alt: hsl(214, 31%, 31%);
 }
 
 html {
@@ -47,7 +49,7 @@ body {
 .main-nav ul {
   list-style: none;
   padding-left: 1rem;
-  padding-bottom: .5rem
+  padding-bottom: 0.5rem;
 }
 
 .main-nav > ul {
