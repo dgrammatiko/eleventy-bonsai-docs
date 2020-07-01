@@ -2,7 +2,6 @@
 title: "Bonsai CSS - A Utility Complete CSS Framework for less than 10kb"
 description: "A complete CSS solution allowing you to build beautifully crafted web interfaces with ease."
 layout: default
-permalink: "/"
 eleventyNavigation:
   key: BonsaiCSS1
   title: Bonsai CSS
