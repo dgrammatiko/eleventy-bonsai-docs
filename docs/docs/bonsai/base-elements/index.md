@@ -13,7 +13,7 @@ eleventyNavigation:
 
 ## Buttons
 
-#### Base styling for button elements including button groups and variations
+#### Base styling for button elements, including button groups and variations
 
 ### Buttons
 
